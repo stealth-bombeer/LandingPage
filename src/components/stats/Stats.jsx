@@ -16,9 +16,9 @@ const Stats = () => {
             {/* item text */}
             <div>
               <div className="text-2xl font-bold lg:text-[40px] lg:mb-2">
-                $30B
+                $$$$
               </div>
-              <div>Digital Currency Exchanged</div>
+              <div>Documents saved digitally </div>
             </div>
           </div>
           {/* item2 */}
