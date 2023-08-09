@@ -90,14 +90,17 @@ const Hero = () => {
               <div>
                 {/* <input type="file" onChange={handleFileChange} /> */}
 
-                <button
-                  type="file"
+                <label
                   class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-7 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-10"
-                  onChange={handleFileChange}
                   data-aos="fade-down"
                   data-aos-delay="700"
                 >
-                  Choose file
+                  <span>Choose file</span>
+                  <input
+                    type="file"
+                    class="hidden"
+                    onChange={handleFileChange}
+                  />
                   <svg
                     class="w-3.5 h-3.5 ml-2"
                     aria-hidden="true"
@@ -113,8 +116,9 @@ const Hero = () => {
                       d="M1 5h12m0 0L9 1m4 4L9 9"
                     />
                   </svg>
-                </button>
+                </label>
               </div>
+
               <div className="flex flex-col items-center lg:flex-row">
                 <div>
                   <button
@@ -155,14 +159,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="container mx-auto lg:mb-24 text-center flex justify-center">
+      <div className=" container mx-auto lg:mb-24 text-center flex justify-center">
         <div className="flex flex-col gap-12 lg:flex-row">
           <div className="flex flex-1 flex-col gap-16 lg:flex-row">
             <div className="text-center w-full lg:text-left">
               <div className="bg-violet-300 rounded-md p-4">
-                <div className="text-2xl font-medium mb-6">
-                  Uploaded Files
-                </div>
+                <div className=" text-4xl font-medium mb-6">Uploaded Files</div>
 
                 <ul className="list-disc pl-6">
                   {uploadedFiles.map((file, index) => (
